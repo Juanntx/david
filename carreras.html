@@ -71,12 +71,29 @@
     .carrera {
       display: flex;
       align-items: center;
+      justify-content: center;
       margin: 80px 0;
       padding: 30px;
       border: 2px solid #004080;
       border-radius: 10px;
-      background-color: #f0f8ff;
-      justify-content: center;
+      background-size: cover;
+      background-position: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .carrera::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5); /* Oscurece el fondo para legibilidad */
+      z-index: 0;
+    }
+
+    .carrera > * {
+      position: relative;
+      z-index: 1;
     }
 
     .carrera .left-side {
@@ -85,7 +102,7 @@
     }
 
     .carrera h2 {
-      color: #004080;
+      color: gold;
     }
 
     .carrera p {
@@ -94,13 +111,23 @@
 
     .carrera .study-duration {
       font-size: 1.1rem;
-      color: #004080;
+      color: white;
       margin-top: 10px;
     }
 
     .carrera .description {
       max-width: 500px;
     }
+
+    /* Fondos únicos por carrera */
+    .carrera-admin { background-image: url("imgfondoAdministracióndeEmpresas.jpg"); }
+    .carrera-conta { background-image: url("imgfondoContaduríaGeneral.jpg"); }
+    .carrera-comercio { background-image: url("imgfondoComercioInternacional.jpg"); }
+    .carrera-enfermeria { background-image: url("imgfondoEnfermeria.png"); }
+    .carrera-mercado { background-image: url("imgfondoMercadotecnia.jpg"); }
+    .carrera-secretariado { background-image: url("imgfondoSecretariadoEjecutivo.jpg"); }
+    .carrera-sistemas { background-image: url("imgfondoSistemasInformatica.jpg"); }
+    .carrera-fisio { background-image: url("imgfondoFisioterapia.jpg"); }
   </style>
 </head>
 <body>
@@ -111,7 +138,6 @@
     <img src="Adobe Express - file.png" alt="Logo IBM" class="logo" />
   </header>
 
-  <!-- Menú con anclas internas -->
   <nav>
     <a href="#Administracion de Empresas">Administración de Empresas</a>
     <a href="#contaduria General">Contaduría General</a>
@@ -123,99 +149,97 @@
     <a href="#Fisioterapia">Fisioterapia</a>
   </nav>
 
-  <!-- Contenido -->
   <div class="content">
     <h1>Bienvenidos a la sección de Carreras</h1>
     <p>Haz clic en una pestaña para ir directamente a la información de cada carrera.</p>
 
-    <!-- Secciones de carrera -->
-    <div class="carrera" id="Administracion de Empresas">
+    <div class="carrera carrera-admin" id="Administracion de Empresas">
       <div class="left-side">
         <img src="administracion.png" alt="Logo Administración de Empresas" class="logo" />
-        <p class="study-duration">una carrera de 3 años</p>
+        <p class="study-duration">Carrera 3 años</p>
       </div>
       <div class="description">
         <h2>Administración de Empresas</h2>
-        <p>La Administración de Empresas es una disciplina que se encarga de organizar, dirigir y controlar los recursos humanos, financieros, materiales y tecnológicos de una organización para alcanzar sus objetivos y maximizar la eficiencia. A lo largo de esta carrera, los estudiantes desarrollarán habilidades de liderazgo, toma de decisiones, resolución de conflictos y planificación estratégica, preparándolos para desempeñarse en diversos sectores empresariales.</p>
+        <p>La Administración de Empresas es una disciplina que se encarga de organizar, dirigir y controlar los recursos humanos, financieros, materiales y tecnológicos...</p>
       </div>
     </div>
-    
-    <div class="carrera" id="contaduria General">
+
+    <div class="carrera carrera-conta" id="contaduria General">
       <div class="left-side">
         <img src="contaduria.png" alt="Logo Contaduría General" class="logo" />
-        <p class="study-duration">una carrera de 3 años</p>
+        <p class="study-duration">Carrera 3 años</p>
       </div>
       <div class="description">
         <h2>Contaduría General</h2>
-        <p>La carrera de Contaduría General proporciona conocimientos sobre la contabilidad, las finanzas y la gestión de la información económica de una empresa. Los estudiantes aprenderán a analizar estados financieros, preparar reportes contables, realizar auditorías y aplicar normas fiscales. Es una carrera esencial para quienes desean gestionar la economía y las finanzas de las organizaciones, asegurando la transparencia y el cumplimiento de las regulaciones legales.</p>
+        <p>La carrera de Contaduría General proporciona conocimientos sobre la contabilidad, las finanzas y la gestión de la información económica de una empresa...</p>
       </div>
     </div>
-    
-    <div class="carrera" id="Comercio Internacional">
+
+    <div class="carrera carrera-comercio" id="Comercio Internacional">
       <div class="left-side">
         <img src="comercio.png" alt="Logo Comercio Internacional" class="logo" />
-        <p class="study-duration">una carrera de 3 años</p>
+        <p class="study-duration">Carrera 3 años</p>
       </div>
       <div class="description">
         <h2>Comercio Internacional</h2>
-        <p>El Comercio Internacional se enfoca en la negociación y gestión de transacciones comerciales entre países. Los estudiantes aprenderán sobre las leyes y regulaciones internacionales, estrategias de marketing global, logística, comercio exterior y finanzas internacionales. Esta carrera es ideal para aquellos interesados en la expansión de empresas a mercados internacionales, el análisis de mercados globales y la optimización de procesos de importación y exportación.</p>
+        <p>El Comercio Internacional se enfoca en la negociación y gestión de transacciones comerciales entre países...</p>
       </div>
     </div>
-    
-    <div class="carrera" id="Enfermeria">
+
+    <div class="carrera carrera-enfermeria" id="Enfermeria">
       <div class="left-side">
         <img src="enfermeria.png" alt="Logo Enfermería" class="logo" />
-        <p class="study-duration">una carrera de 3 años</p>
+        <p class="study-duration">Carrera 2 años</p>
       </div>
       <div class="description">
         <h2>Enfermería</h2>
-        <p>La carrera de Enfermería prepara a los estudiantes para brindar atención médica directa a los pacientes, especialmente en situaciones críticas. Los futuros enfermeros aprenderán a realizar procedimientos médicos básicos, administrar medicamentos, apoyar en la rehabilitación de pacientes y trabajar en equipo con otros profesionales de la salud. La ética profesional y el compromiso con el bienestar de los pacientes son aspectos fundamentales de esta carrera.</p>
+        <p>La carrera de Enfermería prepara a los estudiantes para brindar atención médica directa a los pacientes...</p>
       </div>
     </div>
-    
-    <div class="carrera" id="Mercadotecnia">
+
+    <div class="carrera carrera-mercado" id="Mercadotecnia">
       <div class="left-side">
         <img src="mercadotecnia.png" alt="Logo Mercadotecnia" class="logo" />
-        <p class="study-duration">una carrera de 3 años</p>
+        <p class="study-duration">Carrera 3 años</p>
       </div>
       <div class="description">
         <h2>Mercadotecnia</h2>
-        <p>La Mercadotecnia se centra en el estudio del comportamiento del consumidor, la creación de estrategias de promoción y publicidad, y la optimización de las ventas. Durante esta carrera, los estudiantes aprenderán cómo segmentar mercados, desarrollar campañas publicitarias, utilizar herramientas digitales para la promoción y realizar investigaciones de mercado. Es una excelente opción para quienes desean liderar proyectos de marketing en empresas de cualquier sector.</p>
+        <p>La Mercadotecnia se centra en el estudio del comportamiento del consumidor, la creación de estrategias de promoción...</p>
       </div>
     </div>
-    
-    <div class="carrera" id="Secretariado Ejecutivo">
+
+    <div class="carrera carrera-secretariado" id="Secretariado Ejecutivo">
       <div class="left-side">
         <img src="secretariado.png" alt="Logo Secretariado Ejecutivo" class="logo" />
-        <p class="study-duration">una carrera de 3 años</p>
+        <p class="study-duration">Carrera 3 años</p>
       </div>
       <div class="description">
         <h2>Secretariado Ejecutivo</h2>
-        <p>El Secretariado Ejecutivo capacita a los estudiantes en la organización de actividades administrativas, la gestión de documentos y la comunicación empresarial. Los estudiantes aprenderán habilidades en redacción, manejo de herramientas ofimáticas, organización de agendas, atención al cliente y coordinación de eventos. Esta carrera es ideal para aquellos interesados en desempeñar roles clave dentro de una empresa, asegurando el buen funcionamiento de las operaciones diarias.</p>
+        <p>El Secretariado Ejecutivo capacita a los estudiantes en la organización de actividades administrativas, la gestión de documentos y la comunicación empresarial...</p>
       </div>
     </div>
-    
-    <div class="carrera" id="Sistemas Informaticos">
+
+    <div class="carrera carrera-sistemas" id="Sistemas Informaticos">
       <div class="left-side">
         <img src="sistemas.png" alt="Logo Sistemas Informáticos" class="logo" />
-        <p class="study-duration">una carrera de 3 años</p>
+        <p class="study-duration">Carrera 3 años</p>
       </div>
       <div class="description">
         <h2>Sistemas Informáticos</h2>
-        <p>La carrera de Sistemas Informáticos prepara a los estudiantes en el diseño, implementación y mantenimiento de sistemas de software y hardware. A lo largo de esta carrera, los estudiantes adquirirán habilidades en programación, redes, desarrollo web y gestión de bases de datos. Esta formación es ideal para aquellos que deseen convertirse en expertos en la gestión de infraestructuras tecnológicas y desarrollar soluciones informáticas para empresas y organizaciones.</p>
+        <p>La carrera de Sistemas Informáticos prepara a los estudiantes en el diseño, implementación y mantenimiento de sistemas de software y hardware...</p>
       </div>
     </div>
-    
-    <div class="carrera" id="Fisioterapia">
+
+    <div class="carrera carrera-fisio" id="Fisioterapia">
       <div class="left-side">
         <img src="fisioterapia.png" alt="Logo Fisioterapia" class="logo" />
-        <p class="study-duration">una carrera de 3 años</p>
+        <p class="study-duration">Carrera 3 años</p>
       </div>
       <div class="description">
         <h2>Fisioterapia</h2>
-        <p>La Fisioterapia se enfoca en la prevención y tratamiento de lesiones musculares y articulares, así como en la rehabilitación de pacientes con enfermedades crónicas o lesiones traumáticas. Los estudiantes aprenderán a aplicar técnicas de rehabilitación física, electroterapia, masajes terapéuticos y ejercicios. Esta carrera es ideal para quienes deseen trabajar en el área de la salud, ayudando a mejorar la calidad de vida de las personas a través de la recuperación funcional.</p>
+        <p>La Fisioterapia se enfoca en la prevención y tratamiento de lesiones musculares y articulares, así como en la rehabilitación...</p>
       </div>
-    </div>    
+    </div>
   </div>
 
 </body>
