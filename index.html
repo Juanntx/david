@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instituto técnico mercantil IBM</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #000000;
+      text-align: center;
+    }
+
+    .splash-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeOut 3s forwards 3s;
+      z-index: 9999;
+    }
+
+    .splash-screen video {
+      width: 25%;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+
+    .top-title {
+      background-color: #000;
+      color: gold;
+      font-size: 28px;
+      font-weight: bold;
+      padding: 10px 0;
+      text-transform: uppercase;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #004080;
+      padding: 15px 0;
+    }
+
+    .logo {
+      width: 150px;
+      height: auto;
+      filter: drop-shadow(2px 2px 4px #000);
+    }
+
+    nav {
+      display: none;
+      background-color: #004080;
+      padding: 15px;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00cfff;
+    }
+
+    .content {
+      display: none;
+      margin: 50px 20px;
+    }
+
+    .map-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 40px;
+      gap: 20px;
+    }
+
+    iframe {
+      border: 2px solid #004080;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+    }
+
+    .map-info {
+      max-width: 400px;
+      text-align: left;
+    }
+
+    .map-info h3 {
+      color: #004080;
+      margin-bottom: 10px;
+    }
+
+    .map-info p {
+      margin-bottom: 10px;
+    }
+
+    .social-icons {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .social-img {
+      width: 48px;
+      height: 48px;
+      transition: transform 0.3s;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    }
+
+    .social-img:hover {
+      transform: scale(1.2);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; display: none; }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .top-title { font-size: 20px; padding: 8px 0; }
+      .logo { width: 120px; }
+      nav { flex-direction: column; align-items: center; }
+      nav a { font-size: 16px; padding: 8px; }
+      .splash-screen video { width: 60%; }
+      .map-container { flex-direction: column; align-items: center; }
+    }
+
+    @media (max-width: 480px) {
+      .top-title { font-size: 18px; }
+      .logo { width: 100px; }
+      nav a { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Título dorado en la parte superior -->
+  <div class="top-title">Instituto Mercantil IBM</div>
+
+  <!-- Splash screen -->
+  <div class="splash-screen" id="splashScreen">
+    <video autoplay muted>
+      <source src="video,ibm.mp4" type="video/mp4" />
+      Tu navegador no soporta la reproducción de videos.
+    </video>
+  </div>
+
+  <!-- Encabezado con logo -->
+  <header>
+    <img src="Adobe Express - file.png" alt="Logo INSCO" class="logo" />
+  </header>
+
+  <!-- Menú de navegación -->
+  <nav id="navBar">
+    <a href="carreras.html">Carreras</a>
+    <a href="historia.html">Historia</a>
+    <a href="documentos.html">Documentos Normativos</a>
+  </nav>
+
+  <!-- Contenido principal -->
+  <div class="content" id="mainContent">
+    <h1>ESTUDIA UNA CARRERA EN 3 AÑOS</h1>
+    <p>Selecciona una opción del menú para más información.</p>
+
+    <!-- Sección de mapa + info -->
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d282.9796258080768!2d-66.27915804920879!3d-17.39715197223896!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e30b776010454b%3A0x94c8a0148c94e78!2sINSTITUTO%20BRITANICO%20MERCANTIL!5e0!3m2!1ses-419!2sbo!4v1744155946599!5m2!1ses-419!2sbo"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+
+      <div class="map-info">
+        <h1>Ubicación del Instituto</h1>
+        <h3>OFICINA CENTRAL</h3>
+        <p>
+            <strong>Dirección:</strong> 
+            <img src="ubicacion.png" alt="Ubicación" style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle; margin-top: 4px;">
+            Av. Heroínas #117 entre Ayacucho y Junín Edif. Santiago Planta Baja
+        </p>
+        <p>
+            <strong>Teléfono:</strong> 
+            <img src="llamar.png" alt="Teléfono" style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle; margin-top: 4px;">
+            4584249 - 4501985
+        </p>
+        <p>
+          <strong>WhatsApp:</strong> 
+          <img src="whatsapp.png" alt="WhatsApp" style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle; margin-top: 4px;">
+          64941628
+      </p>
+        <h3>SUB SEDE QUILLACOLLO</h3>
+        <p>
+            <strong>Dirección:</strong> 
+            <img src="ubicacion.png" alt="Ubicación" style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle; margin-top: 4px;">
+            Calle Pacheco entre Nataniel Aguirre y 14 de Septiembre #0351
+        </p>
+        <p>
+            <strong>Teléfono:</strong> 
+            <img src="llamar.png" alt="Teléfono" style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle; margin-top: 4px;">
+            4361110 - 4500914
+        </p>
+        <p>
+            <strong>WhatsApp:</strong> 
+            <img src="whatsapp.png" alt="WhatsApp" style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle; margin-top: 4px;">
+            68598908
+        </p>
+     </div>
+    </div>
+
+    <!-- Íconos de redes sociales -->
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/1J4hdfuqmE/" target="_blank" title="Facebook">
+        <img src="facebook.png" class="social-img" alt="Facebook" style="fill:#016bf5;">
+      </a>
+      <a href="https://wa.me/51999999999" target="_blank" title="WhatsApp">
+        <img src="whatsapp.png" class="social-img" alt="WhatsApp" style="fill:#00e052;">
+      </a>
+      <a href="https://www.tiktok.com/@instituto.ibm.qllo?_t=ZM-8vNGA0NfCbt&_r=1" target="_blank" title="TikTok">
+        <img src="tik-tok.png" class="social-img" alt="TikTok" style="fill:#000000;">
+      </a>
+    </div>
+  </div>
+
+  <!-- Script para mostrar video solo una vez por sesión -->
+  <script>
+    const splashScreen = document.getElementById('splashScreen');
+    const navBar = document.getElementById('navBar');
+    const mainContent = document.getElementById('mainContent');
+    const splashShown = sessionStorage.getItem('splashShown');
+
+    if (splashShown) {
+      splashScreen.style.display = 'none';
+      navBar.style.display = 'flex';
+      mainContent.style.display = 'block';
+    } else {
+      setTimeout(() => {
+        splashScreen.style.display = 'none';
+        navBar.style.display = 'flex';
+        mainContent.style.display = 'block';
+        sessionStorage.setItem('splashShown', 'true');
+      }, 6000);
+    }
+  </script>
+
+</body>
+</html>

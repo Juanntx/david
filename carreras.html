@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instituto Técnico IBM</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: white;
+      color: #000;
+      text-align: center;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #004080;
+      padding: 20px 0;
+    }
+
+    .logo {
+      width: 120px;
+      height: auto;
+      filter: drop-shadow(2px 2px 4px #000);
+    }
+
+    .top-title {
+      background-color: #000;
+      color: gold;
+      font-size: 28px;
+      font-weight: bold;
+      padding: 10px 0;
+      text-transform: uppercase;
+    }
+
+    nav {
+      background-color: #004080;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 15px 0;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 8px 16px;
+      transition: all 0.3s ease;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: gold;
+      color: #000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .content {
+      padding: 40px 20px;
+    }
+
+    .carrera {
+      display: flex;
+      align-items: center;
+      margin: 80px 0;
+      padding: 30px;
+      border: 2px solid #004080;
+      border-radius: 10px;
+      background-color: #f0f8ff;
+      justify-content: center;
+    }
+
+    .carrera .left-side {
+      text-align: left;
+      margin-right: 30px;
+    }
+
+    .carrera h2 {
+      color: #004080;
+    }
+
+    .carrera p {
+      margin-top: 10px;
+    }
+
+    .carrera .study-duration {
+      font-size: 1.1rem;
+      color: #004080;
+      margin-top: 10px;
+    }
+
+    .carrera .description {
+      max-width: 500px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-title">Instituto Técnico IBM</div>
+
+  <header>
+    <img src="Adobe Express - file.png" alt="Logo IBM" class="logo" />
+  </header>
+
+  <!-- Menú con anclas internas -->
+  <nav>
+    <a href="#Administracion de Empresas">Administración de Empresas</a>
+    <a href="#contaduria General">Contaduría General</a>
+    <a href="#Comercio Internacional">Comercio Internacional</a>
+    <a href="#Enfermeria">Enfermería</a>
+    <a href="#Mercadotecnia">Mercadotecnia</a>
+    <a href="#Secretariado Ejecutivo">Secretariado Ejecutivo</a>
+    <a href="#Sistemas Informaticos">Sistemas Informáticos</a>
+    <a href="#Fisioterapia">Fisioterapia</a>
+  </nav>
+
+  <!-- Contenido -->
+  <div class="content">
+    <h1>Bienvenidos a la sección de Carreras</h1>
+    <p>Haz clic en una pestaña para ir directamente a la información de cada carrera.</p>
+
+    <!-- Secciones de carrera -->
+    <div class="carrera" id="Administracion de Empresas">
+      <div class="left-side">
+        <img src="administracion.png" alt="Logo Administración de Empresas" class="logo" />
+        <p class="study-duration">una carrera de 3 años</p>
+      </div>
+      <div class="description">
+        <h2>Administración de Empresas</h2>
+        <p>La Administración de Empresas es una disciplina que se encarga de organizar, dirigir y controlar los recursos humanos, financieros, materiales y tecnológicos de una organización para alcanzar sus objetivos y maximizar la eficiencia. A lo largo de esta carrera, los estudiantes desarrollarán habilidades de liderazgo, toma de decisiones, resolución de conflictos y planificación estratégica, preparándolos para desempeñarse en diversos sectores empresariales.</p>
+      </div>
+    </div>
+    
+    <div class="carrera" id="contaduria General">
+      <div class="left-side">
+        <img src="contaduria.png" alt="Logo Contaduría General" class="logo" />
+        <p class="study-duration">una carrera de 3 años</p>
+      </div>
+      <div class="description">
+        <h2>Contaduría General</h2>
+        <p>La carrera de Contaduría General proporciona conocimientos sobre la contabilidad, las finanzas y la gestión de la información económica de una empresa. Los estudiantes aprenderán a analizar estados financieros, preparar reportes contables, realizar auditorías y aplicar normas fiscales. Es una carrera esencial para quienes desean gestionar la economía y las finanzas de las organizaciones, asegurando la transparencia y el cumplimiento de las regulaciones legales.</p>
+      </div>
+    </div>
+    
+    <div class="carrera" id="Comercio Internacional">
+      <div class="left-side">
+        <img src="comercio.png" alt="Logo Comercio Internacional" class="logo" />
+        <p class="study-duration">una carrera de 3 años</p>
+      </div>
+      <div class="description">
+        <h2>Comercio Internacional</h2>
+        <p>El Comercio Internacional se enfoca en la negociación y gestión de transacciones comerciales entre países. Los estudiantes aprenderán sobre las leyes y regulaciones internacionales, estrategias de marketing global, logística, comercio exterior y finanzas internacionales. Esta carrera es ideal para aquellos interesados en la expansión de empresas a mercados internacionales, el análisis de mercados globales y la optimización de procesos de importación y exportación.</p>
+      </div>
+    </div>
+    
+    <div class="carrera" id="Enfermeria">
+      <div class="left-side">
+        <img src="enfermeria.png" alt="Logo Enfermería" class="logo" />
+        <p class="study-duration">una carrera de 3 años</p>
+      </div>
+      <div class="description">
+        <h2>Enfermería</h2>
+        <p>La carrera de Enfermería prepara a los estudiantes para brindar atención médica directa a los pacientes, especialmente en situaciones críticas. Los futuros enfermeros aprenderán a realizar procedimientos médicos básicos, administrar medicamentos, apoyar en la rehabilitación de pacientes y trabajar en equipo con otros profesionales de la salud. La ética profesional y el compromiso con el bienestar de los pacientes son aspectos fundamentales de esta carrera.</p>
+      </div>
+    </div>
+    
+    <div class="carrera" id="Mercadotecnia">
+      <div class="left-side">
+        <img src="mercadotecnia.png" alt="Logo Mercadotecnia" class="logo" />
+        <p class="study-duration">una carrera de 3 años</p>
+      </div>
+      <div class="description">
+        <h2>Mercadotecnia</h2>
+        <p>La Mercadotecnia se centra en el estudio del comportamiento del consumidor, la creación de estrategias de promoción y publicidad, y la optimización de las ventas. Durante esta carrera, los estudiantes aprenderán cómo segmentar mercados, desarrollar campañas publicitarias, utilizar herramientas digitales para la promoción y realizar investigaciones de mercado. Es una excelente opción para quienes desean liderar proyectos de marketing en empresas de cualquier sector.</p>
+      </div>
+    </div>
+    
+    <div class="carrera" id="Secretariado Ejecutivo">
+      <div class="left-side">
+        <img src="secretariado.png" alt="Logo Secretariado Ejecutivo" class="logo" />
+        <p class="study-duration">una carrera de 3 años</p>
+      </div>
+      <div class="description">
+        <h2>Secretariado Ejecutivo</h2>
+        <p>El Secretariado Ejecutivo capacita a los estudiantes en la organización de actividades administrativas, la gestión de documentos y la comunicación empresarial. Los estudiantes aprenderán habilidades en redacción, manejo de herramientas ofimáticas, organización de agendas, atención al cliente y coordinación de eventos. Esta carrera es ideal para aquellos interesados en desempeñar roles clave dentro de una empresa, asegurando el buen funcionamiento de las operaciones diarias.</p>
+      </div>
+    </div>
+    
+    <div class="carrera" id="Sistemas Informaticos">
+      <div class="left-side">
+        <img src="sistemas.png" alt="Logo Sistemas Informáticos" class="logo" />
+        <p class="study-duration">una carrera de 3 años</p>
+      </div>
+      <div class="description">
+        <h2>Sistemas Informáticos</h2>
+        <p>La carrera de Sistemas Informáticos prepara a los estudiantes en el diseño, implementación y mantenimiento de sistemas de software y hardware. A lo largo de esta carrera, los estudiantes adquirirán habilidades en programación, redes, desarrollo web y gestión de bases de datos. Esta formación es ideal para aquellos que deseen convertirse en expertos en la gestión de infraestructuras tecnológicas y desarrollar soluciones informáticas para empresas y organizaciones.</p>
+      </div>
+    </div>
+    
+    <div class="carrera" id="Fisioterapia">
+      <div class="left-side">
+        <img src="fisioterapia.png" alt="Logo Fisioterapia" class="logo" />
+        <p class="study-duration">una carrera de 3 años</p>
+      </div>
+      <div class="description">
+        <h2>Fisioterapia</h2>
+        <p>La Fisioterapia se enfoca en la prevención y tratamiento de lesiones musculares y articulares, así como en la rehabilitación de pacientes con enfermedades crónicas o lesiones traumáticas. Los estudiantes aprenderán a aplicar técnicas de rehabilitación física, electroterapia, masajes terapéuticos y ejercicios. Esta carrera es ideal para quienes deseen trabajar en el área de la salud, ayudando a mejorar la calidad de vida de las personas a través de la recuperación funcional.</p>
+      </div>
+    </div>    
+  </div>
+
+</body>
+</html>

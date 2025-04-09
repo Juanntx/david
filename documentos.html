@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instituto Técnico IBM</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: white;
+      color: #000;
+      text-align: center;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #004080;
+      padding: 20px 0;
+    }
+
+    .logo {
+      width: 150px;
+      height: auto;
+      filter: drop-shadow(2px 2px 4px #000);
+    }
+
+    .top-title {
+      background-color: #000;
+      color: gold;
+      font-size: 28px;
+      font-weight: bold;
+      padding: 10px 0;
+      text-transform: uppercase;
+    }
+
+    nav {
+      background-color: #004080;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 15px 0;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 8px 16px;
+      transition: all 0.3s ease;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: gold;
+      color: #000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .content {
+      padding: 40px 20px;
+    }
+
+    .carrera {
+      margin: 80px 0;
+      padding: 30px;
+      border: 2px solid #004080;
+      border-radius: 10px;
+      background-color: #f0f8ff;
+    }
+
+    .carrera h2 {
+      color: #004080;
+    }
+
+    .carrera p {
+      margin-top: 10px;
+    }
+
+    /* Estilos para el encabezado informativo */
+    .intro-header {
+      background-color: #004080;
+      padding: 30px 10px;
+    }
+
+    .intro-header h1 {
+      color: white;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .intro-header p {
+      color: white;
+      font-size: 1rem;
+    }
+
+    /* Lista de documentos */
+    .document-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 20px;
+    }
+
+    .document-item {
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .document-link {
+      display: block;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .document-card {
+      display: flex;
+      align-items: flex-start;
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .document-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+      background-color: #004080;
+      color: white;
+    }
+
+    .document-card:hover .document-title,
+    .document-card:hover .document-description {
+      color: white;
+    }
+
+    .document-text {
+      flex: 1;
+    }
+
+    .document-title {
+      font-size: 1.2rem;
+      color: #b8860b; /* dorado oscuro */
+      font-weight: bold;
+      margin: 0;
+      transition: color 0.3s ease;
+    }
+
+    .document-description {
+      color: #555;
+      font-size: 1rem;
+      margin-top: 8px;
+      line-height: 1.6;
+      transition: color 0.3s ease;
+    }
+
+    .document-item:hover .document-description {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-title">Instituto Técnico IBM</div>
+
+  <!-- Logo -->
+  <header class="main-header">
+    <img src="Adobe Express - file.png" alt="Logo IBM" class="logo" />
+  </header>
+
+  <!-- Encabezado informativo -->
+  <header class="intro-header">
+    <h1>Documentos Normativos</h1>
+    <p>Accede a los documentos normativos del Instituto Técnico Mercantil IBM.</p>
+  </header>
+
+  <!-- Lista de documentos -->
+  <div>
+    <h2 style="text-align: center; margin-top: 40px; font-size: 2rem; color: #000000;">Lista de Documentos Normativos</h2>
+    <ul class="document-list">
+      <li class="document-item">
+        <a href="CamScanner 07-04-2025 10.13.pdf" target="_blank" class="document-link">
+          <div class="document-card">
+            <div class="document-text">
+              <h3 class="document-title">REGLAMENTO INTERNO ESTUDIANTIL</h3>
+              <p class="document-description">
+                Este documento describe los requisitos y procedimientos para el proceso de admisión, incluyendo los plazos y los criterios para la selección de estudiantes.
+              </p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <li class="document-item">
+        <a href="Reglamento Interno de Practica Estudiantil.pdf" target="_blank" class="document-link">
+          <div class="document-card">
+            <div class="document-text">
+              <h3 class="document-title">REGLAMENTO INTERNO DE PRACTICA ESTUDIANTIL</h3>
+              <p class="document-description">
+                Reglamento que regula la convivencia dentro del instituto, detallando las normas de conducta y disciplina, además de los derechos y responsabilidades durante las prácticas estudiantiles.
+              </p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <li class="document-item">
+        <a href="Reglamento interno de Becas.pdf" target="_blank" class="document-link">
+          <div class="document-card">
+            <div class="document-text">
+              <h3 class="document-title">REGLAMENTO INTERNO DE BECAS</h3>
+              <p class="document-description">
+                Información detallada sobre los requisitos, modalidades y procedimientos para la obtención de becas para los estudiantes del instituto.
+              </p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <li class="document-item">
+        <a href="Reglamemto Interno de Biblioteca.pdf" target="_blank" class="document-link">
+          <div class="document-card">
+            <div class="document-text">
+              <h3 class="document-title">REGLAMENTO INTERNO DE BIBLIOTECA</h3>
+              <p class="document-description">
+                Detalles sobre las políticas de uso de la biblioteca, incluyendo horarios, tipos de material disponible y las reglas de comportamiento en el espacio.
+              </p>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>  
+</body>
+</html>

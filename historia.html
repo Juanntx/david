@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instituto Técnico IBM</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: white;
+      color: #000;
+      text-align: center;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #004080;
+      padding: 20px 0;
+    }
+
+    .logo {
+      width: 150px;
+      height: auto;
+      filter: drop-shadow(2px 2px 4px #000);
+    }
+
+    .top-title {
+      background-color: #000;
+      color: gold;
+      font-size: 28px;
+      font-weight: bold;
+      padding: 10px 0;
+      text-transform: uppercase;
+    }
+
+    nav {
+      background-color: #004080;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 15px 0;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 8px 16px;
+      transition: all 0.3s ease;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: gold;
+      color: #000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .content {
+      padding: 40px 20px;
+    }
+
+    .carrera {
+      margin: 80px 0;
+      padding: 30px;
+      border: 2px solid #004080;
+      border-radius: 10px;
+      background-color: #f0f8ff;
+    }
+
+    .carrera h2 {
+      color: #004080;
+    }
+
+    .carrera p {
+      margin-top: 10px;
+    }
+
+    /* Historia */
+    .history-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .history-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #004080;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      animation: slideDown 1s ease-in-out;
+    }
+
+    .history-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .history-card {
+      flex: 1 1 48%; /* Aumenta el tamaño de las tarjetas */
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: slideUp 1s ease;
+      margin-bottom: 20px;
+    }
+
+    .history-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .history-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .history-content {
+      padding: 20px;
+    }
+
+    .history-content h3 {
+      font-size: 1.5rem;
+      color: #004080;
+      margin-bottom: 10px;
+    }
+
+    .history-content p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes slideDown {
+      from {transform: translateY(-30px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+
+    @keyframes slideUp {
+      from {transform: translateY(30px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+
+    @media (max-width: 768px) {
+      .history-card {
+        flex: 1 1 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-title">Instituto Técnico IBM</div>
+
+  <!-- Logo -->
+  <header>
+    <img src="Adobe Express - file.png" alt="Logo IBM" class="logo" />
+  </header>
+
+  <!-- Sección de Historia -->
+  <section class="history-section">
+    <h3 class="history-title"> INSTITUCION TECNICO MERCANTIL IBM </h3>
+  
+    <div class="history-container">
+  
+      <div class="history-card">
+        <img src="historia1.jpg" alt="Fundación del Instituto" class="history-image">
+        <div class="history-content">
+          <h3> RESEÑA HISTORICA </h3>
+    <h3>INSTITUTO BRITÁNICO MERCANTIL</h3>
+
+    <p><strong>Nombre de la Institución:</strong></p>
+    <p>INSTITUTO TÉCNICO BRITÁNICO MERCANTIL "I.B.M."</p>
+
+    <p><strong>Fecha de Fundación:</strong></p>
+    <p>
+        El Instituto Británico Mercantil se fundó el 22 de Febrero de 1998, 
+        con 26 años de experiencia institucional, en la ciudad de COCHABAMBA, 
+        actualmente cuenta con una sucursal en la CIUDAD DE QUILLACOLLO 
+        fundada un 11 de febrero del 2001, con 21 años a la formación de grandes 
+        Profesionales. Quienes logran insertarse al mercado laboral con las competencias 
+        adquiridas durante el proceso de su formación académica haciendo frente a las 
+        demandas sugeridas por el mercado competente.
+    </p>
+
+    <p><strong>CARRERAS DEL ÁREA COMERCIAL:</strong></p>
+    <ul>
+        <li>TÉCNICO SUPERIOR ADMINISTRACIÓN DE EMPRESAS</li>
+        <li>TÉCNICO SUPERIOR COMERCIO INTERNACIONAL Y ADMINISTRACIÓN ADUANERA</li>
+        <li>TÉCNICO SUPERIOR MERCADOTECNIA</li>
+        <li>TÉCNICO SUPERIOR SECRETARIADO EJECUTIVO</li>
+        <li>TÉCNICO SUPERIOR CONTADURÍA GENERAL</li>
+        <li>TÉCNICO SUPERIOR SISTEMAS INFORMÁTICOS</li>
+    </ul>
+
+        </div>
+      </div>
+      
+      <div class="history-card">
+        <img src="historia2.jpg" alt="Crecimiento y Reconocimiento" class="history-image">
+        <div class="history-content">
+          <h3> AUTORIDADES DE LA INSTITUCION </h3>
+          <p><strong>CARRERAS DEL ÁREA SALUD:</strong></p>
+    <ul>
+        <li>TÉCNICO SUPERIOR EN FISIOTERAPIA</li>
+        <li>TÉCNICO MEDIO EN ENFERMERÍA</li>
+    </ul>
+
+    <h3>AUTORIDADES DE LA INSTITUCIÓN</h3>
+    <p>
+        <strong>A LA CABEZA DE:</strong> PRESIDENTE DE LA CORPORACIÓN EDUCATIVA CEICOM-IBM-ITEVA<br>
+        LIC. JOSE LUIS LUJAN BARRIOS
+    </p>
+    <p>
+        RECTOR DEL INSTITUTO IBM QUILLACOLLO<br>
+        ING. DOUGLAS ALEJANDRO LUJAN MOREIRA
+    </p>
+    <p>
+        <strong>NÚMERO DEL PLANTEL ADMINISTRATIVO:</strong><br>
+        Dirección General, Dirección Académica, Administrativa, Coordinación Enfermería, Fisioterapia.
+    </p>
+
+    <p><strong>Dirección:</strong></p>
+    <p>
+        CENTRAL COCHABAMBA: Av. San Martín Nro. 429 esquina Jordán<br>
+        Telf.: 4501985
+    </p>
+    <p>
+        SUCURSAL QUILLACOLLO: Calle Pacheco N°s-748 entre Nataniel Aguirre y 14 de Septiembre<br>
+        Teléfono: 4361110
+    </p>
+
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+</body>
+</html>
