@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Te Amo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+    }
+    #media {
+      margin-top: 20px;
+      text-align: center;
+    }
+    #poema {
+      max-width: 90%;
+      margin-top: 20px;
+      text-align: center;
+      font-size: 1.2em;
+      line-height: 1.6em;
+      color: red; /* Cambié el color a rojo */
+      display: none;
+    }
+    #corazon {
+      display: none;
+      margin-top: 40px;
+      font-size: 5em;
+      color: red;
+      animation: latir 1s infinite;
+    }
+    @keyframes latir {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+    #mensaje-final {
+      display: none;
+      font-size: 1.5em;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .rosa {
+      position: absolute;
+      top: -50px;
+      width: 40px;
+      animation: caer 5s linear forwards;
+    }
+    @keyframes caer {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div id="media">
+    <audio id="audioRomantico" src="Audio de WhatsApp 2025-05-04 a las 23.52.07_e2f57ab3.mp3" controls></audio>
+  </div>
+
+  <div id="poema"></div>
+
+  <div id="corazon">❤️</div>
+
+  <div id="mensaje-final">Te amo Leticia mi amor eres todo mio sabes que tu y yo siempre sera para siempre</div>
+
+  <audio id="audioDespedida" src="Audio de WhatsApp 2025-05-05 a las 00.08.17_1bb64216.mp3"></audio>
+
+  <script>
+    const poema = `Aunque la distancia nos separe,  
+y no pueda tocar tu piel,  
+en cada estrella veo tu rostro,  
+y en mis sueños siempre estás en mí.  
+
+Tus palabras son mi refugio,  
+mi consuelo en cada noche fría,  
+y aunque la distacia nos divida,  
+en mi corazón nunca te vas.  
+
+A través del viento te siento,  
+en cada rincón de mi alma,  
+y aunque el tiempo pase lento,  
+te llevo siempre dentro de mi calma.  
+
+La distancia no puede romper  
+lo que el corazón ha unido,  
+porque cada pensamiento en ti,  
+es un lazo que nunca se ha perdido.  
+
+Cada día que pasa, te extraño más,  
+pero sé que pronto te tendré aquí,  
+el amor no tiene fronteras,  
+y aunque lejos, siempre serás mi feliz.`;
+
+    const poemaDiv = document.getElementById('poema');
+    const corazon = document.getElementById('corazon');
+    const mensajeFinal = document.getElementById('mensaje-final');
+    const audio = document.getElementById('audioRomantico');
+    const despedida = document.getElementById('audioDespedida');
+
+    let index = 0;
+
+    const duracionCancion = 2.35 * 60 * 1000; // Convertir 2 minutos 35 segundos a milisegundos
+    const intervaloLetra = duracionCancion / poema.length; // Tiempo por letra para que dure toda la canción
+
+    function mostrarPoema() {
+      poemaDiv.style.display = 'block';
+      if (index < poema.length) {
+        poemaDiv.innerHTML += poema.charAt(index) === '\n' ? '<br>' : poema.charAt(index);
+        index++;
+        setTimeout(mostrarPoema, intervaloLetra); // Mostrar la siguiente letra después del intervalo calculado
+      }
+    }
+
+    // Iniciar reproducción automática con retardo de 10 segundos
+    setTimeout(() => {
+      audio.play();
+    }, 10000);
+
+    audio.addEventListener('play', () => {
+      mostrarPoema();
+    });
+
+    audio.addEventListener('ended', () => {
+      poemaDiv.style.display = 'none';
+      corazon.style.display = 'block';
+      lanzarRosas();
+      setTimeout(() => {
+        mensajeFinal.style.display = 'block';
+        despedida.play();
+      }, 6000);
+    });
+
+    function lanzarRosas() {
+      const rosas = 15;
+      for (let i = 0; i < rosas; i++) {
+        setTimeout(() => {
+          const img = document.createElement('img');
+          img.src = 'https://i.imgur.com/3vXH5VE.png'; // rosa roja
+          img.classList.add('rosa');
+          img.style.left = Math.random() * 100 + 'vw';
+          document.body.appendChild(img);
+
+          const texto = document.createElement('div');
+          texto.textContent = 'Te amo';
+          texto.style.position = 'absolute';
+          texto.style.top = '0';
+          texto.style.left = img.style.left;
+          texto.style.color = 'pink';
+          texto.style.fontSize = '1.2em';
+          texto.style.animation = 'caer 5s linear forwards';
+          document.body.appendChild(texto);
+        }, i * 500);
+      }
+    }
+  </script>
+</body>
+</html>
